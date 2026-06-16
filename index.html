@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A gentle, beginner-friendly guide to Shiatsu and acupressure self-care: meridian maps, pressure points, facial lymph massage, and calming daily routines." />
+  <title>Gentle Pressure · Shiatsu &amp; Acupressure Self-Care Guide</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Flowing "meridian" thread that runs down the whole page (signature element) -->
+  <div class="meridian-thread" aria-hidden="true">
+    <svg viewBox="0 0 20 1000" preserveAspectRatio="none">
+      <path id="threadPath" d="M10 0 C 2 120, 18 240, 10 360 C 2 480, 18 600, 10 720 C 2 840, 18 940, 10 1000"
+            fill="none" stroke="url(#threadGrad)" stroke-width="2" stroke-linecap="round" />
+      <defs>
+        <linearGradient id="threadGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#6E9C84" />
+          <stop offset="50%" stop-color="#5B8CA0" />
+          <stop offset="100%" stop-color="#C98A63" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <a href="#home" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28">
+          <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+          <circle cx="16" cy="16" r="5" fill="currentColor"/>
+          <path d="M16 2 C 9 11, 9 21, 16 30 C 23 21, 23 11, 16 2" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+        </svg>
+      </span>
+      <span class="brand-text">Gentle&nbsp;Pressure</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home">Welcome</a>
+      <a href="#meridians">Meridian Map</a>
+      <a href="#points">Pressure Points</a>
+      <a href="#facial">Facial Massage</a>
+      <a href="#routines">Daily Routines</a>
+      <a href="#tips">Beginner Tips</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" title="Toggle light / dark">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.5"/><g stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.2" y1="5.2" x2="6.9" y2="6.9"/><line x1="17.1" y1="17.1" x2="18.8" y2="18.8"/><line x1="18.8" y1="5.2" x2="17.1" y2="6.9"/><line x1="6.9" y1="17.1" x2="5.2" y2="18.8"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path d="M20 14.5A8 8 0 1 1 9.5 4 6.3 6.3 0 0 0 20 14.5Z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HOME ===================== -->
+    <section id="home" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">Shiatsu &amp; Acupressure · for complete beginners</p>
+        <h1>Gentle Pressure</h1>
+        <p class="hero-sub">A calm, hands-on guide to easing stress, headaches, and heavy days &mdash; using nothing but your own two hands.</p>
+
+        <div class="river-note">
+          <svg viewBox="0 0 60 24" width="56" height="22" aria-hidden="true"><path d="M2 12 C 12 4, 18 20, 30 12 C 42 4, 48 20, 58 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <p>Picture <strong>rivers of energy</strong> flowing through your body. When a river runs clear, you feel light and steady. When it gets blocked, you feel tense or tired. Acupressure is simply pressing gently on the riverbanks to help things flow again.</p>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#points" class="btn btn-primary">Find a pressure point</a>
+          <a href="#routines" class="btn btn-ghost">Try a 5-minute routine</a>
+        </div>
+      </div>
+      <a href="#welcome" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- WELCOME / WHAT IS IT -->
+    <section id="welcome" class="band">
+      <div class="container">
+        <p class="section-eyebrow">Start here</p>
+        <h2 class="section-title">What is Shiatsu &amp; acupressure?</h2>
+        <div class="lede-grid">
+          <div class="lede-text">
+            <p><strong>Shiatsu</strong> (Japanese for &ldquo;finger pressure&rdquo;) and <strong>acupressure</strong> are gentle touch practices rooted in thousands of years of Eastern medicine. Instead of needles, you use your thumbs, fingertips, and palms to press specific spots on the body.</p>
+            <p>Those spots sit along invisible pathways called <strong>meridians</strong> &mdash; the &ldquo;energy highways&rdquo; or rivers we talked about. Pressing the right point is like nudging a small stone out of a stream: the flow eases, your muscles relax, and your nervous system gets a quiet signal that it&rsquo;s safe to settle.</p>
+            <p>You don&rsquo;t need any training, equipment, or talent. If you can rest a thumb on your wrist and breathe slowly, you can begin today.</p>
+          </div>
+          <figure class="lede-figure">
+            <!-- REPLACE: calming hands / self-massage photo -->
+            <img class="ph" data-fallback="A pair of calm hands" src="https://picsum.photos/seed/gentlehands/800/900" alt="Calm hands resting, illustrating gentle self-massage" loading="lazy" />
+            <figcaption>Your hands are the only tool you need.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="band band-tint">
+      <div class="container">
+        <p class="section-eyebrow">Why people love it</p>
+        <h2 class="section-title">A little pressure, a lot of calm</h2>
+        <div class="benefits-grid" id="benefitsGrid"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="band">
+      <div class="container">
+        <aside class="disclaimer" role="note">
+          <span class="disclaimer-mark" aria-hidden="true">!</span>
+          <div>
+            <h3>A gentle, important note</h3>
+            <p>This guide is for relaxation and general well-being only. It is <strong>not medical advice</strong> and is not a substitute for diagnosis or treatment. If you are pregnant, managing a health condition, recovering from injury, or feeling unwell, please talk to a qualified doctor or licensed practitioner before trying these techniques. Acupressure should always feel comfortable &mdash; never force anything that hurts.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== MERIDIAN MAP ===================== -->
+    <section id="meridians" class="band band-tint">
+      <div class="container">
+        <p class="section-eyebrow">The rivers</p>
+        <h2 class="section-title">Body meridian map</h2>
+        <p class="section-intro">Twelve main rivers run through your body, paired with two central channels. Tap a name to light up its path and see what it helps with. You don&rsquo;t need to memorize these &mdash; they&rsquo;re just a map of where the points live.</p>
+
+        <div class="meridian-layout">
+          <!-- View switcher + SVG body -->
+          <div class="meridian-figure">
+            <div class="view-switch" role="tablist" aria-label="Body view">
+              <button class="view-btn is-active" data-view="front" role="tab" aria-selected="true">Front</button>
+              <button class="view-btn" data-view="back" role="tab" aria-selected="false">Back</button>
+              <button class="view-btn" data-view="side" role="tab" aria-selected="false">Side</button>
+            </div>
+            <div class="body-stage" id="bodyStage"><!-- SVG injected by JS --></div>
+            <p class="figure-cap">Stylized chart · tap a meridian to highlight its flow</p>
+          </div>
+
+          <!-- Legend / descriptions -->
+          <div class="meridian-info">
+            <ul class="meridian-list" id="meridianList"><!-- filled by JS --></ul>
+            <div class="meridian-detail" id="meridianDetail" aria-live="polite">
+              <p class="muted">Select a meridian to read about it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRESSURE POINTS ===================== -->
+    <section id="points" class="band">
+      <div class="container">
+        <p class="section-eyebrow">The good spots</p>
+        <h2 class="section-title">Key pressure points &amp; self-massage</h2>
+        <p class="section-intro">These beginner-friendly points do a lot of the heavy lifting. Each card shows where it is, what it&rsquo;s good for, and exactly how to press it. Start with one or two that match how you feel today.</p>
+
+        <div class="point-search">
+          <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+          <input type="search" id="pointSearch" placeholder="Search points (e.g. headache, sleep, LI4, nausea)…" aria-label="Search pressure points" />
+        </div>
+        <p class="search-empty" id="searchEmpty" hidden>No points match that search &mdash; try a feeling like &ldquo;calm&rdquo; or &ldquo;energy.&rdquo;</p>
+
+        <div class="points-grid" id="pointsGrid"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== FACIAL LYMPH ===================== -->
+    <section id="facial" class="band band-tint">
+      <div class="container">
+        <p class="section-eyebrow">For a soft, bright face</p>
+        <h2 class="section-title">Facial lymph massage routine</h2>
+        <p class="section-intro">Lymph is your body&rsquo;s gentle drainage system &mdash; it has no pump of its own, so light, slow strokes help it move. Always glide <strong>outward and downward</strong> toward your neck, where the fluid drains. Use a feather-light touch; think of petting a cat, not kneading dough.</p>
+
+        <div class="facial-layout">
+          <figure class="facial-figure">
+            <div class="facial-stage" id="facialStage"><!-- SVG injected by JS --></div>
+            <figcaption>Arrows show the direction to glide. Always finish at the sides of the neck.</figcaption>
+          </figure>
+          <ol class="facial-steps" id="facialSteps"><!-- filled by JS --></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DAILY ROUTINES ===================== -->
+    <section id="routines" class="band">
+      <div class="container">
+        <p class="section-eyebrow">Make it a habit</p>
+        <h2 class="section-title">Daily self-care routines</h2>
+        <p class="section-intro">Short, guided sequences for different moments. Press <em>Start</em> and the timer walks you through each step with a calm breathing pace. Find a comfy seat, soften your shoulders, and let&rsquo;s begin.</p>
+
+        <div class="routine-tabs" id="routineTabs" role="tablist" aria-label="Choose a routine"><!-- filled by JS --></div>
+        <div class="routine-player" id="routinePlayer"><!-- filled by JS --></div>
+      </div>
+    </section>
+
+    <!-- ===================== TIPS ===================== -->
+    <section id="tips" class="band band-tint">
+      <div class="container">
+        <p class="section-eyebrow">Press with confidence</p>
+        <h2 class="section-title">Tips for beginners</h2>
+
+        <div class="tips-grid" id="tipsGrid"><!-- filled by JS --></div>
+
+        <div class="kids-card">
+          <div class="kids-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="34" height="34"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="10" r="1.3" fill="currentColor"/><circle cx="15.5" cy="10" r="1.3" fill="currentColor"/><path d="M8 14.5 C 9.5 16.5, 14.5 16.5, 16 14.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <h3>Super-simple version (great for kids)</h3>
+            <p>Pretend your fingertip is a tiny, friendly turtle. Rest the turtle on a spot, let it press <em>just a little</em>, and take three slow dragon breaths &mdash; in through the nose, out through the mouth. Wiggle, shake your hands out, and you&rsquo;re done! The squishy spot between your thumb and finger (point <strong>LI4</strong>) is a fun one to start with when you feel grumpy or have a headache.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="brand brand-footer">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><circle cx="16" cy="16" r="5" fill="currentColor"/></svg>
+          </span>
+          <span class="brand-text">Gentle Pressure</span>
+        </a>
+        <p class="footer-tag">A quiet place to learn the language of touch.</p>
+        <button class="btn btn-ghost btn-print" id="printBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M6 14h12v7H6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Print this guide
+        </button>
+      </div>
+
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#welcome">What it is</a></li>
+          <li><a href="#meridians">Meridian map</a></li>
+          <li><a href="#points">Pressure points</a></li>
+          <li><a href="#facial">Facial massage</a></li>
+          <li><a href="#routines">Daily routines</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Learn more &amp; sources</h4>
+        <ul>
+          <li><a href="https://www.nccih.nih.gov/health/acupuncture-effectiveness-and-safety" target="_blank" rel="noopener">NIH / NCCIH on acupuncture &amp; acupressure</a></li>
+          <li><a href="https://www.shiatsusociety.org/" target="_blank" rel="noopener">The Shiatsu Society (UK)</a></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/pmc/?term=acupressure" target="_blank" rel="noopener">Acupressure research (PubMed Central)</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Meridian_(Chinese_medicine)" target="_blank" rel="noopener">Meridians &mdash; overview</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-fine">
+      <p><strong>Disclaimer:</strong> This website is for educational and relaxation purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional before beginning any new wellness practice, especially during pregnancy or illness. Stop immediately if you feel pain or discomfort.</p>
+      <p class="footer-credit">Built with care for beginners · Replace placeholder images with your own photos &amp; charts.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+    <figure class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
