@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="A gentle, beginner-friendly guide to Shiatsu and acupressure self-care: meridian maps, pressure points, facial lymph massage, and calming daily routines." />
-  <title>Gentle Pressure · Shiatsu &amp; Acupressure Self-Care Guide</title>
+  <title>Gentle Pressure · a tool for Esra to be more Esra</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -67,7 +67,8 @@
       <div class="hero-inner">
         <p class="eyebrow">Shiatsu &amp; Acupressure · for complete beginners</p>
         <h1>Gentle Pressure</h1>
-        <p class="hero-sub">A calm, hands-on guide to easing stress, headaches, and heavy days &mdash; using nothing but your own two hands.</p>
+        <p class="hero-tagline">a tool for Esra to be more Esra</p>
+        <p class="hero-sub">A calm, hands-on beginner&rsquo;s guide to shiatsu and acupressure &mdash; traditional self-massage you can do with nothing but your own two hands.</p>
 
         <div class="river-note">
           <svg viewBox="0 0 60 24" width="56" height="22" aria-hidden="true"><path d="M2 12 C 12 4, 18 20, 30 12 C 42 4, 48 20, 58 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -75,7 +76,7 @@
         </div>
 
         <div class="hero-cta">
-          <a href="#points" class="btn btn-primary">Find a pressure point</a>
+          <a href="#points" class="btn btn-primary">Browse the pressure points</a>
           <a href="#routines" class="btn btn-ghost">Try a 5-minute routine</a>
         </div>
       </div>
@@ -87,17 +88,10 @@
       <div class="container">
         <p class="section-eyebrow">Start here</p>
         <h2 class="section-title">What is Shiatsu &amp; acupressure?</h2>
-        <div class="lede-grid">
-          <div class="lede-text">
-            <p><strong>Shiatsu</strong> (Japanese for &ldquo;finger pressure&rdquo;) and <strong>acupressure</strong> are gentle touch practices rooted in thousands of years of Eastern medicine. Instead of needles, you use your thumbs, fingertips, and palms to press specific spots on the body.</p>
-            <p>Those spots sit along invisible pathways called <strong>meridians</strong> &mdash; the &ldquo;energy highways&rdquo; or rivers we talked about. Pressing the right point is like nudging a small stone out of a stream: the flow eases, your muscles relax, and your nervous system gets a quiet signal that it&rsquo;s safe to settle.</p>
-            <p>You don&rsquo;t need any training, equipment, or talent. If you can rest a thumb on your wrist and breathe slowly, you can begin today.</p>
-          </div>
-          <figure class="lede-figure">
-            <!-- REPLACE: calming hands / self-massage photo -->
-            <img class="ph" data-fallback="A pair of calm hands" src="https://picsum.photos/seed/gentlehands/800/900" alt="Calm hands resting, illustrating gentle self-massage" loading="lazy" />
-            <figcaption>Your hands are the only tool you need.</figcaption>
-          </figure>
+        <div class="lede-text">
+          <p><strong>Shiatsu</strong> (Japanese for &ldquo;finger pressure&rdquo;) and <strong>acupressure</strong> are gentle touch practices rooted in thousands of years of Eastern medicine. Instead of needles, you use your thumbs, fingertips, and palms to press specific spots on the body.</p>
+          <p>Those spots sit along invisible pathways called <strong>meridians</strong> &mdash; the &ldquo;energy highways&rdquo; or rivers we talked about. Pressing the right point is like nudging a small stone out of a stream: the flow eases, your muscles relax, and your nervous system gets a quiet signal that it&rsquo;s safe to settle.</p>
+          <p>You don&rsquo;t need any training, equipment, or talent. If you can rest a thumb on your wrist and breathe slowly, you can begin today.</p>
         </div>
       </div>
     </section>
@@ -105,9 +99,14 @@
     <!-- BENEFITS -->
     <section class="band band-tint">
       <div class="container">
-        <p class="section-eyebrow">Why people love it</p>
-        <h2 class="section-title">A little pressure, a lot of calm</h2>
+        <p class="section-eyebrow">What it&rsquo;s traditionally used for</p>
+        <h2 class="section-title">What gentle pressure may help with</h2>
+        <p class="section-intro">These are the situations people most often turn to acupressure for. Treat them as <strong>traditional uses</strong> and gentle support for relaxation &mdash; not promised cures.</p>
         <div class="benefits-grid" id="benefitsGrid"><!-- filled by JS --></div>
+        <p class="evidence-note">
+          <span class="evidence-mark" aria-hidden="true">i</span>
+          <span>Much of this comes from centuries of traditional practice. Modern research is still <strong>limited and mixed</strong>: there&rsquo;s reasonable evidence for a few uses &mdash; such as easing nausea and some kinds of pain &mdash; while many other claims remain unproven. Enjoy it as a calming ritual, and check with a doctor for anything that persists. <a href="https://www.nccih.nih.gov/health/acupuncture-effectiveness-and-safety" target="_blank" rel="noopener">What the research says &rarr;</a></span>
+        </p>
       </div>
     </section>
 
@@ -157,9 +156,11 @@
     <!-- ===================== PRESSURE POINTS ===================== -->
     <section id="points" class="band">
       <div class="container">
-        <p class="section-eyebrow">The good spots</p>
+        <p class="section-eyebrow">Where &amp; how to press</p>
         <h2 class="section-title">Key pressure points &amp; self-massage</h2>
         <p class="section-intro">These beginner-friendly points do a lot of the heavy lifting. Each card shows where it is, what it&rsquo;s good for, and exactly how to press it. Start with one or two that match how you feel today.</p>
+
+        <div class="point-finder" id="pointFinder"><!-- filled by JS --></div>
 
         <div class="point-search">
           <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
@@ -174,7 +175,7 @@
     <!-- ===================== FACIAL LYMPH ===================== -->
     <section id="facial" class="band band-tint">
       <div class="container">
-        <p class="section-eyebrow">For a soft, bright face</p>
+        <p class="section-eyebrow">A gentle face routine</p>
         <h2 class="section-title">Facial lymph massage routine</h2>
         <p class="section-intro">Lymph is your body&rsquo;s gentle drainage system &mdash; it has no pump of its own, so light, slow strokes help it move. Always glide <strong>outward and downward</strong> toward your neck, where the fluid drains. Use a feather-light touch; think of petting a cat, not kneading dough.</p>
 
@@ -203,7 +204,7 @@
     <!-- ===================== TIPS ===================== -->
     <section id="tips" class="band band-tint">
       <div class="container">
-        <p class="section-eyebrow">Press with confidence</p>
+        <p class="section-eyebrow">Technique &amp; safety</p>
         <h2 class="section-title">Tips for beginners</h2>
 
         <div class="tips-grid" id="tipsGrid"><!-- filled by JS --></div>
@@ -270,7 +271,8 @@
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
     <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
     <figure class="lightbox-inner">
-      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-stage" id="lightboxStage" hidden></div>
+      <img id="lightboxImg" src="" alt="" hidden />
       <figcaption id="lightboxCap"></figcaption>
     </figure>
   </div>
