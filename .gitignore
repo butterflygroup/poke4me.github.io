@@ -10,3 +10,6 @@
 
 # Logs
 *.log
+
+# Claude Code (local preview server / config)
+.claude/
